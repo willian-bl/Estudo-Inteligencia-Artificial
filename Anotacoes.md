@@ -166,3 +166,34 @@ Outro tipo de dados que tem tratamentos, visualização e manipulação diferent
 #### Machine Learning com Time Series
 
 O modelo mais usado é o ARIMA model, mas também temos o VAR model (Vector Auto Regression)
+
+
+### Aprendizagem por reforço
+
+Existe um ambiente e um agente.
+
+Agente: Faz uma série de ações no ambiente, caminhando entre diferentes estados e recebendo recompensas para quando se aproxima do objetivo
+
+Recompensas positivas são quando o agente está se aproximando do objetivo. Já recompensas negativas são quando o agente se distancia do objetivo.
+
+Nesse tipo de aprendizagem, não precisamos possuir uma base de dados prévia, já que o algoritmo será inteiramente treinado durante os treinamentos com o reforço.
+
+Living penalty: penalidade pelo agente estar "vivo" no ambiente, para que ele não fique se movimentando e tomando decisões aleatórias e demoradas. Isso força ele a otimizar a resolução do problema.
+
+Fórmula matemática muito usada na aprendizagem de reforço: Equação de Bellman (Busca o V, valor para as ações, para decidir qual é o melhor estado)
+
+    - V=1, melhor estado
+
+    - Gammsssa: fator de desconto (está relacionado com as recompensas)
+
+Markov Decision Process (MDP) - Exploration (Existe uma chance pequena do agente não seguir o melhor caminho. Porém, isso faz com que ele continue explorando o ambiente) Vs Exploitation (SEMPRE serguirá para o melhor caminho)
+
+Algoritmo Q-Learning: fórmula matemática básica para escolher as melhores ações. Com o Q-learning temos uma abordagem mais voltada para as ações e recompensas do agente. Daí, com esse algoritmo, precisamos do valor de Q para calcular o valor de V na Equação de Bellman
+
+Episódio: rodada completa de execução do algoritmo
+
+Diferença temporal: De acordo com cada ação/estado em que o agente toma, os valores V e qualidades Q das ações mudam.
+
+Learning rate: Coeficiente na fórmula da diferença temporal que indica o quão rápido o algoritmo vai aprender
+
+O objetivo é que o algoritmo aprenda a escolher as melhores ações para ganhar as melhores recompensas possíveis
